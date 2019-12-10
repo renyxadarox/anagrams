@@ -5,7 +5,7 @@
 #include <string.h>
 #include <time.h>
 
-#define MAX_ROW_SIZE 1000000
+#define MAX_ROW_SIZE 1000002
 #define LETTERS_CNT 26
 
 FILE * finput, * foutput;
@@ -99,15 +99,15 @@ int main()
     for (i=0; i<2; i++)
         for (t = a[i]; *t != '\0'; t++)
             letters[i][(int)(*t) - (int)('A')]++;
-/*
+
     for (i=0; i<2; i++)
         for (j=0; j<LETTERS_CNT; j++)
             printf ("%c[%i] - %d\n",(char)(j+(int)('A')),i,letters[i][j]);
-*/
+
 
     for (j=0; j<LETTERS_CNT; j++) {
         out_cnt += abs(letters[0][j] - letters[1][j]);
-//        printf ("%c - %d\n",(char)(j+(int)('A')),abs(letters[0][j] - letters[1][j]));
+        printf ("%c - %d\n",(char)(j+(int)('A')),abs(letters[0][j] - letters[1][j]));
     }
 
     write_output();
