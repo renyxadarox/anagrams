@@ -73,7 +73,7 @@ int read_input(void)
 int write_output(void)
 {
     foutput = fopen(output_file_name, "w");
-    if(finput == NULL)
+    if(foutput == NULL)
         return (EXIT_FAILURE);
     printf("%" PRIu32 "\n", out_cnt);
     fprintf(foutput, "%" PRIu32 "\n", out_cnt);
